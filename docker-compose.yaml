@@ -2,7 +2,7 @@ services:
   server:
     build:
       context: .
-      dockerfile: server.Dockerfile
+      dockerfile: server.DockerFile
     container_name: minecraft-server
     restart: unless-stopped
     ports:
@@ -19,7 +19,7 @@ services:
   client:
     build:
       context: .
-      dockerfile: client.Dockerfile
+      dockerfile: client.DockerFile
     container_name: minecraft-client
     restart: unless-stopped
     ports:
