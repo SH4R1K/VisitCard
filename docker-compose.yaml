@@ -18,8 +18,8 @@ services:
 
   client:
     build:
-      context: .
-      dockerfile: client.DockerFile
+      context:  client
+      dockerfile: static.DockerFile
     container_name: minecraft-client
     restart: unless-stopped
     ports:
