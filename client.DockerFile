@@ -14,7 +14,7 @@ COPY package*.json ./
 RUN npm ci
 
 # Копируем исходный код клиента
-COPY client/ ./client/
+COPY src/ ./client/
 
 # Собираем React-приложение
 WORKDIR /app/client
