@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Устанавливаем все зависимости (они общие)
-RUN npm ci
+RUN npm install
 
 # Копируем исходный код сервера
 COPY server/ ./server/

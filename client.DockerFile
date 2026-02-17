@@ -11,7 +11,7 @@ ENV REACT_APP_API_URL=$REACT_APP_API_URL
 COPY package*.json ./
 
 # Устанавливаем все зависимости
-RUN npm ci
+RUN npm install
 
 # Копируем исходный код клиента
 COPY src/ ./client/
