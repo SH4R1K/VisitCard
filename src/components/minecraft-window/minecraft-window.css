@@ -1,0 +1,67 @@
+.minecraft-window {
+  background-color: #8B8B8B; /* базовый серый как у кнопок */
+  border: 6px solid #2D2D2D;
+  border-top-color: #FFFFFF;
+  border-left-color: #FFFFFF;
+  border-bottom-color: #5A5A5A;
+  border-right-color: #5A5A5A;
+  box-shadow: 5px 5px 0 #000000;
+  image-rendering: pixelated;
+  font-family: 'Minecraft', 'Courier New', monospace;
+  color: white;
+  text-shadow: 2px 2px 0 #000000;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px;
+}
+
+.window-header {
+  background-color: #6B4C3B; /* цвет дерева/земли */
+  padding: 8px 12px;
+  border-bottom: 4px solid #2D2D2D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-title {
+  font-size: 24px;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.window-close {
+  font-family: 'Minecraft', 'Courier New', monospace;
+  background-color: #C04C4C; /* красноватый */
+  border: 4px solid #2D2D2D;
+  border-top-color: #FF6B6B;
+  border-left-color: #FF6B6B;
+  border-bottom-color: #8B3A3A;
+  border-right-color: #8B3A3A;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #000000;
+  text-shadow: 2px 2px 0 #000;
+  transition: all 0.05s linear;
+  padding: 0;
+  line-height: 1;
+}
+
+.window-close:active {
+  border-top-color: #8B3A3A;
+  border-left-color: #8B3A3A;
+  border-bottom-color: #FF6B6B;
+  border-right-color: #FF6B6B;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.window-content {
+  padding: 20px;
+}

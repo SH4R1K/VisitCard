@@ -1,31 +1,79 @@
+/* Глобальные переменные цветовой палитры Minecraft */
+:root {
+  --mc-green: #7CFC00;
+  --mc-dark-green: #0a3b0a;
+  --mc-brown: #8B4513;
+  --mc-stone: #808080;
+  --mc-dark-stone: #5a5a5a;
+  --mc-dirt: #6b4c3b;
+  --mc-wood: #8d6b4d;
+  --mc-black: #2D2D2D;
+  --mc-white: #FFFFFF;
+  --mc-border: #000000;
+  --mc-shadow: rgba(0, 0, 0, 0.8);
+}
+
+/* Общий стиль страницы */
+body {
+  margin: 0;
+  font-family: 'Minecraft', 'Courier New', monospace;
+  /* background-color: var(--mc-dark-black); */
+  background:
+  radial-gradient(ellipse at top, #1A1A2E, transparent),
+  radial-gradient(ellipse at bottom, #16213E, transparent);
+  /* background-size: 32px 32px; */
+  background-position: 0 0, 0 16px, 16px -16px, -16px 0px;
+}
+
+/* Основной контейнер приложения */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+/* Хедер — стилизован как блок земли/камня */
+.App-header {
+  background-color: var(--mc-dirt);
+  background-image: 
+    radial-gradient(circle at 10px 10px, var(--mc-wood) 2px, transparent 2px),
+    radial-gradient(circle at 30px 25px, var(--mc-wood) 3px, transparent 3px);
+  background-size: 40px 40px;
+  border: 6px solid var(--mc-black);
+  border-radius: 0; /* Отключаем скругление — нужны острые углы */
+  box-shadow: 
+    inset -3px -3px 0 var(--mc-dark-stone),
+    inset 3px 3px 0 var(--mc-white),
+    5px 5px 0 var(--mc-black);
+  padding: 30px 40px;
+  color: var(--mc-white);
+  font-size: 1.5rem;
+  text-shadow: 3px 3px 0 var(--mc-black);
+  max-width: 800px;
+  width: 100%;
+  margin: 20px;
+  transition: all 0.1s ease;
+  image-rendering: pixelated;
+}
+
+/* Логотип (если хотите сохранить SVG, можно добавить фильтр для пикселизации) */
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+  image-rendering: pixelated;
+  filter: drop-shadow(4px 4px 0 var(--mc-black));
+}
+
+/* Анимация вращения логотипа (как в оригинальном React, но в стиле Minecraft) */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +84,93 @@
     transform: rotate(360deg);
   }
 }
+
+/* Стили для параграфа с описанием */
+.App-header p {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: var(--mc-stone);
+  border: 4px solid var(--mc-black);
+  box-shadow: inset -2px -2px 0 var(--mc-dark-stone), inset 2px 2px 0 var(--mc-white);
+  color: var(--mc-white);
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 0 var(--mc-black);
+  word-break: break-word;
+}
+
+/* Стили для input (поля ввода имени канала) */
+input[type="text"] {
+  font-family: 'Courier New', monospace;
+  background-color: var(--mc-black);
+  border: 4px solid var(--mc-stone);
+  border-top-color: var(--mc-white);
+  border-left-color: var(--mc-white);
+  border-bottom-color: var(--mc-dark-stone);
+  border-right-color: var(--mc-dark-stone);
+  color: var(--mc-white);
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  width: 250px;
+  max-width: 100%;
+  outline: none;
+  box-shadow: 2px 2px 0 var(--mc-black);
+  text-shadow: 2px 2px 0 var(--mc-black);
+  transition: all 0.1s ease;
+}
+
+input[type="text"]:focus {
+  border-color: var(--mc-green);
+  border-top-color: var(--mc-green);
+  border-left-color: var(--mc-green);
+  border-bottom-color: var(--mc-dark-green);
+  border-right-color: var(--mc-dark-green);
+  background-color: #3d3d3d;
+}
+
+/* Кнопка (если понадобится) */
+button {
+  font-family: 'Courier New', monospace;
+  background-color: var(--mc-stone);
+  border: 4px solid var(--mc-black);
+  border-top-color: var(--mc-white);
+  border-left-color: var(--mc-white);
+  border-bottom-color: var(--mc-dark-stone);
+  border-right-color: var(--mc-dark-stone);
+  color: var(--mc-white);
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-shadow: 2px 2px 0 var(--mc-black);
+  box-shadow: 3px 3px 0 var(--mc-black);
+  transition: all 0.05s linear;
+  image-rendering: pixelated;
+}
+
+button:active {
+  border-top-color: var(--mc-dark-stone);
+  border-left-color: var(--mc-dark-stone);
+  border-bottom-color: var(--mc-white);
+  border-right-color: var(--mc-white);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--mc-black);
+}
+
+/* Стили для текста загрузки и ошибок */
+.App-header p:contains('Загрузка'),
+.App-header p:contains('Ошибка') {
+  background-color: var(--mc-black);
+  color: #ff5555;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 600px) {
+  .App-header {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+  input[type="text"] {
+    width: 100%;
+  }
+}
+
+.menu { width: 200px; height: 150px; overflow-y: auto; }

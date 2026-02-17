@@ -1,0 +1,89 @@
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Стилизация скроллбара под Minecraft */
+.projects-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.projects-list::-webkit-scrollbar-track {
+  background: #5A5A5A;
+  border: 2px solid #2D2D2D;
+}
+
+.projects-list::-webkit-scrollbar-thumb {
+  background: #8B8B8B;
+  border: 2px solid #2D2D2D;
+  border-top-color: #FFFFFF;
+  border-left-color: #FFFFFF;
+  border-bottom-color: #5A5A5A;
+  border-right-color: #5A5A5A;
+}
+
+.projects-list::-webkit-scrollbar-thumb:hover {
+  background: #9C9C9C;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #5A5A5A;
+  border: 4px solid #2D2D2D;
+  border-top-color: #FFFFFF;
+  border-left-color: #FFFFFF;
+  border-bottom-color: #3D3D3D;
+  border-right-color: #3D3D3D;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: all 0.05s linear;
+  box-shadow: 3px 3px 0 #000;
+  image-rendering: pixelated;
+}
+
+.project-item:active {
+  border-top-color: #3D3D3D;
+  border-left-color: #3D3D3D;
+  border-bottom-color: #FFFFFF;
+  border-right-color: #FFFFFF;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+.project-icon {
+  font-size: 32px;
+  width: 40px;
+  text-align: center;
+  filter: drop-shadow(2px 2px 0 #000);
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-title {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.project-description {
+  margin: 0;
+  font-size: 14px;
+  color: #CCCCCC;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.project-open {
+  font-size: 24px;
+  color: #7CFC00;
+  text-shadow: 2px 2px 0 #000;
+  margin-left: 10px;
+}
