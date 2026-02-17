@@ -27,7 +27,7 @@ FROM nginx:alpine
 COPY --from=build /app/client/build /usr/share/nginx/html
 
 # Копируем конфиг Nginx для поддержки React Router
-COPY client/nginx.conf /etc/nginx/conf.d/default.conf
+COPY src/nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
